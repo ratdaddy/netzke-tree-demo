@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508200232) do
+ActiveRecord::Schema.define(version: 20150511223003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,10 @@ ActiveRecord::Schema.define(version: 20150508200232) do
   create_table "truffulas", force: :cascade do |t|
     t.integer  "parent_id"
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "count"
+    t.string   "under_scored"
   end
 
   add_index "truffulas", ["parent_id"], name: "index_truffulas_on_parent_id", using: :btree

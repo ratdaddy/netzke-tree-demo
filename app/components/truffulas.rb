@@ -5,6 +5,7 @@ class Truffulas < Netzke::Basepack::Tree
     config.columns = [
       {name: :title, xtype: :treecolumn},
       :count,
+      :under_scored,
     ]
     config.root_visible = false
   end
